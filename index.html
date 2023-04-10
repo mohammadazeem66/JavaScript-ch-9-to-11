@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript-ch 9 to 11</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+// 1. Write a program to take “city” name as input from user. If user enters “Karachi”, welcome the user like this: “Welcome to city of lights”
+  
+   document.write("<h1> Question 1 </h1>")
+   var city = prompt("Enter the city name");
+    if (city === "karachi" || "Karachi") {
+       document.write("welcome to the city of light");
+}
+else{
+    document.write("City Not Found")
+}
+
+
+// 2. Write a program to take “gender” as input from user. If the user is male, give the message: Good Morning Sir. If the user is female, give the message: Good Morning Ma’am.
+
+
+        document.write("<h1> Question 2 </h1>");
+    
+        var gender = prompt("enter your gender");
+
+            if(gender=="Male"){
+            document.write("Good Morning Sir");
+            }
+            else(gender=="Female")
+            {
+            document.write("Good Morning Ma’am");
+            }
+      
+
+// 3. Write a program to take input color of road traffic signal from the user & show the message according to this table:
+
+
+document.write("<h1> Question 3 </h1>")
+
+var signal_color = prompt("Enter colours")
+
+if(signal_color=="Red"){
+    document.write("Stop");
+}
+else if(signal_color=="Yellow"){
+    document.write("Ready to move");
+}
+else if(signal_color=="Green")
+{
+    document.write("Move now");
+}
+else{
+    document.write("wrong color name");
+}
+
+
+//  4. Write a program to take input remaining fuel in car (in litres) from user. If the current fuel is less than 0.25litres, show the message “Please refill the fuel in your car”
+
+  document.write("<h1> Question 4 </h1>")
+     var fuel = +prompt("Enter remaning fuel")
+          if(fuel <= 0.25){
+            document.write("Please refill the fuel in your car")
+          }  
+          else{
+            document.write("You have enough fuel for 2km ")
+          }
+
+
+// 5. Run this script, & check whether alert message would be displayed or not. Record the outputs.
+// a. var a = 4;
+// if (++a === 5){
+// alert("given condition for variable a is true");
+// }
+// b. var b = 82;
+// if (b++ === 83){
+// alert("given condition for variable b is true");
+// }
+// c. var c = 12;
+// if (c++ === 13){
+// alert("condition 1 is true");
+// }
+// if (c === 13){
+// alert("condition 2 is true");
+// }
+// if (++c < 14){
+// alert("condition 3 is true");
+// }
+// if(c === 14){
+// alert("condition 4 is true");
+// }
+// d. var materialCost = 20000;
+// var laborCost = 2000;
+// var totalCost = materialCost + laborCost;
+// if (totalCost === laborCost + materialCost){
+// alert("The cost equals");
+// }
+// e. if (true){
+// alert("True");
+// }
+// if (false){
+// alert("False");
+// }
+// f. if("car" < "cat"){
+// alert("car is smaller than cat");
+// }
+
+
+document.write("<h1> Question 5 </h1>")
+document.write("<h1> part a </h1>")
+// a
+var a =4;
+if (++a ===5){
+    document.write("given condition for variable a is true");
+}
+
+document.write("<h1> part b </h1>")
+// b
+var b = 82;
+if (++b === 83){
+    document.write("given condition for variable b is true");
+}
+
+document.write("<h1> part c </h1>")
+// c
+var c =12;
+if (c++ === 13){
+    document.write("condition 1 is true");
+}
+else if (c === 13){
+    document.write("condition 2 is true");
+}
+else if (++c < 14){
+    document.write("condition 3 is true");
+}
+else if(c === 14){
+    document.write("condition 4 is true");
+}
+else{
+    document.write("No Condition is true")
+}
+
+document.write("<h1> part d </h1>")
+// d
+var materialCost = 20000;
+var laborCost = 2000;
+var totalCost = materialCost + laborCost;
+if (totalCost ===laborCost + materialCost){
+    document.write("The cost equals");
+}
+
+document.write("<h1> part e </h1>")
+// e
+var a = prompt("enter statement true or false");
+if (a === true){
+    document.write("you are true");
+}
+ if(a === false){
+    document.write("you are false")
+}
+// else{
+//     document.write("undefined")
+// }
+
+document.write("<h1> part f </h1>")
+// f
+if("car" < "cat"){
+    document.write("car is smaller than cat");
+}
+
+
+// 6. Write a program to take input the marks obtained in three subjects & total marks. Compute & show the resulting percentage on your page.
+
+
+document.write("<h1> Question 6 </h1>")
+
+document.write("<br> <h2> Marks Sheet </h2>")
+var obtain=+prompt("Enter obtained marks ") 
+total=300 ,percentage;
+ 
+percentage=(obtain/total)*100;
+document.write(""+obtain+" <br>");
+document.write(""+total+" <br>");
+
+if(percentage>=80){
+    document.write("Grade A+ <br>")
+document.write("Remarks: Excellent <br>")
+}
+else if(percentage>=70){
+    document.write("Grade: A <br>")
+document.write("Remarks: Good <br>")
+}
+
+
+else if(percentage>=60){
+    document.write("Grade: b <br>")
+document.write("Remarks: you need to improve <br>")
+}
+else if(percentage<60){
+    document.write("Grade: Fail <br>")
+document.write("Remarks: Sorry <br>")
+}
+
+else{
+    document.write("try again")
+}
+
+document.write("Percentage ="+percentage+"%");
+
+
+
+// 7. Guess game: Store a secret number (ranging from 1 to 10) in a variable. Prompt user to guess the secret number.
+   // a. If user guesses the same number, show “Bingo! Correct
+   // answer”.
+   // b. If the guessed number +1 is the secret number, show
+   // “Close enough to the correct answer”.
+
+   document.write("<h1> Question 7 </h1>")
+   var num = 5;
+   guessNum = +prompt("guess the secret number");
+     if (num == guessNum) {
+        document.write("Bingo! Correct answer");
+     }
+     else
+           {
+         document.write("Close enough to the correct answer")
+      }
+
+
+// 8. Write a program to check whether the given number is divisible by 3. Show the message to the user if the number is divisible by 3.
+
+  document.write("<h1> Question 8 </h1>")
+
+  var num = +prompt("Enter number ")
+          if(num % 3 == 0){
+            document.write("the number is divisible by 3")
+          }  
+          else{
+            document.write("This is not divisible by 3")
+          }
+
+
+    //  9. Write a program that checks whether the given input is an even number or an odd number.
+
+    document.write("<h1> Question 9 </h1>")
+    var n = +prompt("enter any number")
+    if(n%2 == 0){
+        document.write("given number is even number")
+    }
+    else{
+        document.write("given number is odd number")
+    }
+
+
+
+    // 10. Write a program that takes temperature as input and shows a message based on following criteria
+        // a. T > 40 then “It is too hot outside.”
+        // b. T > 30 then “The Weather today is Normal.”
+        // c. T > 20 then “Today’s Weather is cool.”
+        // d. T > 10 then “OMG! Today’s weather is so Cool.”
+
+        document.write("<h1> Question 10 </h1>")
+
+        var temp = +prompt("enter temperature here");
+         if (temp > 40) {
+            document.write("It is too hot outside.")
+         }
+         else if (temp > 30) {
+            document.write("The Weather today is Normal.")
+         }
+         else if (temp > 20) {
+            document.write("Today's Weather is cool.")
+         }
+         else if ( temp > 10)
+         {
+            document.write("OMG! Today's weather is so Cool.")
+         }
+         else{
+             document.write("undefined")
+         }
+
+
+        
+//11. Write a program to create a calculator for +,-,*, / & % using if statements. Take the following input:
+    //    a. First number
+    //    b. Second number
+    //    c. Operation (+, -, *, /, %)
+    //    Compute & show the calculated result to user.  
+
+
+
+    document.write("<h1> Question 11 </h1>")
+
+    var num1 = +prompt("first number");
+    var operation = prompt("operation");
+    var num2 = +prompt ("second number");
+    var results;
+    if (operation == "+") {
+      results = num1 + num2;
+    }
+    else if (operation == "-") {
+      results = num1 - num2;
+    }
+    else if (operation == "*") {
+      results = num1 * num2;
+    }
+    else if (operation == "/") {
+      results = num1 / num2;
+    }
+    else if (operation == "%"){
+      results = num1 % num2;
+    }
+    else
+    {
+      document.write("not a number");
+    }
+    document.write(" " + "result is " + results);
+
+
+
+
+    </script>
+</body>
+</html>
